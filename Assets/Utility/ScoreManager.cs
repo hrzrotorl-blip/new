@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = score.ToString();  // "원" 제거
+        scoreText.text = "점수: " + score.ToString();
     }
 
 }
