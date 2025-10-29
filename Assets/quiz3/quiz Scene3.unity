@@ -3279,7 +3279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793ac5f10b8ffc243b9f3a28fe278a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 10
+  timeToWait: 15
   sceneToLoad: MainScene
 --- !u!4 &1975293535
 Transform:
