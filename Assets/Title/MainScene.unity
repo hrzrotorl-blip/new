@@ -1803,7 +1803,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5288ce4e19d8d034ab1a0de24c4adc69, type: 2}
+  - {fileID: 2100000, guid: 1d0a3e40f8a4d9e40842e02424551242, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3274,7 +3274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570b3b83259809e4580a8c9e76781329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1358764158}
+  timerTextObjectName: TimerText
 --- !u!4 &1666102771
 Transform:
   m_ObjectHideFlags: 0
