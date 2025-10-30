@@ -10,6 +10,33 @@ public class DropSlot : MonoBehaviour
     [HideInInspector] public bool isOccupied = false;
     Draggable occupant;
 
+    public string successMessage = "홍동백서 : 빨간것은 동쪽, 하얀것은 서쪽";
+    private UIManager uiManager;
+
+    void Start()
+    {
+        // 씬에서 UIManager를 자동으로 찾아 연결 (안전장치)
+        if (uiManager == null)
+        {
+            uiManager = FindObjectOfType<UIManager>();
+        }
+    }
+
+    // 마우스로 이 오브젝트(슬롯)를 클릭했을 때 호출됨
+    void OnMouseDown()
+    {
+        // 이것이 "상호작용" 부분입니다.
+        // 만약 슬롯이 점유되어 있고 (isOccupied == true)
+        // UIManager가 연결되어 있다면
+        if (isOccupied && uiManager != null)
+        {
+            // UIManager에게 메시지 표시를 요청
+            uiManager.ShowMessage(successMessage);
+        }
+    }
+    // --- ---
+
+    // (Reset, GetSnapPosition, GetSnapRotation, Occupy, Vacate 함수는 그대로 둡니다)
     void Reset()
     {
         // Collider는 trigger로 설정 권장
