@@ -1,27 +1,27 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Collections;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; // ·¹°Å½Ã Text ÄÄÆ÷³ÍÆ®¸¦ À§ÇØ Ãß°¡
+using UnityEngine.UI; // ë ˆê±°ì‹œ Text ì»´í¬ë„ŒíŠ¸ë¥¼ ìœ„í•´ ì¶”ê°€
 
 public class UIManager : MonoBehaviour
 {
-    public Text infoText; // TextMeshProUGUI ´ë½Å Text »ç¿ë
+    public Text infoText; // TextMeshProUGUI ëŒ€ì‹  Text ì‚¬ìš©
     private Coroutine hideCoroutine;
 
     void Start()
     {
         if (infoText != null)
-            infoText.gameObject.SetActive(false); // ½ÃÀÛÇÒ ¶§ ÅØ½ºÆ® ¼û±è
+            infoText.gameObject.SetActive(false); // ì‹œì‘í•  ë•Œ í…ìŠ¤íŠ¸ ìˆ¨ê¹€
     }
 
-    // ¸Ş½ÃÁö¸¦ º¸¿©ÁÖ´Â ÇÔ¼ö
+    // ë©”ì‹œì§€ë¥¼ ë³´ì—¬ì£¼ëŠ” í•¨ìˆ˜
     public void ShowMessage(string message, float duration = 3f)
     {
         if (infoText == null) return;
 
-        // ÀÌ¹Ì ¸Ş½ÃÁö°¡ ¶°ÀÖ´Ù¸é, ÀÌÀü ¼û±è ÄÚ·çÆ¾ ÁßÁö
+        // ì´ë¯¸ ë©”ì‹œì§€ê°€ ë– ìˆë‹¤ë©´, ì´ì „ ìˆ¨ê¹€ ì½”ë£¨í‹´ ì¤‘ì§€
         if (hideCoroutine != null)
         {
             StopCoroutine(hideCoroutine);
@@ -30,18 +30,18 @@ public class UIManager : MonoBehaviour
         infoText.text = message;
         infoText.gameObject.SetActive(true);
 
-        // durationÃÊ ÈÄ¿¡ ¸Ş½ÃÁö¸¦ ¼û±â´Â ÄÚ·çÆ¾ ½ÃÀÛ
+        // durationì´ˆ í›„ì— ë©”ì‹œì§€ë¥¼ ìˆ¨ê¸°ëŠ” ì½”ë£¨í‹´ ì‹œì‘
         hideCoroutine = StartCoroutine(HideAfterSeconds(duration));
     }
 
-    // ¸Ş½ÃÁö¸¦ Áï½Ã ¼û±â´Â ÇÔ¼ö
+    // ë©”ì‹œì§€ë¥¼ ì¦‰ì‹œ ìˆ¨ê¸°ëŠ” í•¨ìˆ˜
     public void HideMessage()
     {
         if (infoText != null)
             infoText.gameObject.SetActive(false);
     }
 
-    // ÁöÁ¤µÈ ½Ã°£ ÈÄ¿¡ ÅØ½ºÆ®¸¦ ¼û±â´Â ÄÚ·çÆ¾
+    // ì§€ì •ëœ ì‹œê°„ í›„ì— í…ìŠ¤íŠ¸ë¥¼ ìˆ¨ê¸°ëŠ” ì½”ë£¨í‹´
     private IEnumerator HideAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
