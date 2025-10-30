@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 // StageTrigger.cs
-using System.Collections;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
