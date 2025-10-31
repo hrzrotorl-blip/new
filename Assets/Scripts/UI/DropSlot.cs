@@ -43,5 +43,15 @@ public class DropSlot : MonoBehaviour
         occupant = null;
     }
 
-    // (옵션) 슬롯 근처에 들어오는 물건을 자동으로 감지하려면 trigger 콜백을 구현해도 됨.
+    /// <summary>
+    /// 슬롯에 놓인 오브젝트가 정답인지 판별
+    /// </summary>
+    public bool IsCorrect()
+    {
+        if (!isOccupied || occupant == null)
+            return false;
+
+        // occupant가 가진 id가 이 슬롯의 id와 일치하면 정답
+        return occupant.id == id;
+    }
 }
