@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &393139259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -794,12 +794,12 @@ GameObject:
   - component: {fileID: 1149135166}
   - component: {fileID: 1149135165}
   m_Layer: 5
-  m_Name: InfoText
+  m_Name: DialogueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1149135165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +821,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 20aac3466deb0ae48a691b8de986d012, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -833,7 +833,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uC0C1\uD638\uC791\uC6A9 "
+  m_Text: "\uC548\uB155 \uBC18\uAC11\uB2E4!"
 --- !u!222 &1149135166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 1734319238}
   - component: {fileID: 1734319237}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogueCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,11 +1381,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844117192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb1bf103f499f14bb767b12157ed881, type: 3}
+  m_Script: {fileID: 11500000, guid: 60ce443c5c2dbca4e88dd8887c7be3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubble: {fileID: 393139258}
-  infoText: {fileID: 1149135165}
+  dialoguePanel: {fileID: 393139258}
+  dialogueText: {fileID: 1149135165}
+  message: "\uC548\uB155 \uBC18\uAC11\uB2E42"
   showDuration: 3
 --- !u!1 &1881192401
 GameObject:
