@@ -35,10 +35,4 @@ public class BGMController : MonoBehaviour
         if (audioSource.isPlaying)
             audioSource.Pause();
     }
-
-    // º¼·ý Á¶Àý
-    public void SetVolume(float volume)
-    {
-        audioSource.volume = volume;
-    }
 }
