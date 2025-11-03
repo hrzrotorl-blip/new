@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde975ae6469ef64288afbcf1679d220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: MainScene2
+  nextSceneName: IntroAnimationScene 2
   triggerClip: {fileID: 8300000, guid: 61cb2fbded629704b810a72e37850209, type: 3}
   audioSource: {fileID: 0}
   extraWait: 0

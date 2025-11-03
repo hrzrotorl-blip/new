@@ -5240,11 +5240,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1909487868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90777b08e53438143a232c578483c6a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 13465e0966c5fc84482c810d6679a9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: quiz Scene1
-  requiredTag: Player
+  targetSceneName: IntroAnimationScene
 --- !u!1001 &2028675235
 PrefabInstance:
   m_ObjectHideFlags: 0
