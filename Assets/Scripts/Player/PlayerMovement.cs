@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;     // 걷기 속도
     public float jumpForce = 7f;     // 점프 높이
-    public float airControl = 0.5f;  // 공중 이동 조정(0~1)
+   // public float airControl = 0.5f;  // 공중 이동 조정(0~1)
 
     private Rigidbody rb;
     private bool isGrounded = false;
@@ -28,10 +28,10 @@ public class PlayerMovement : MonoBehaviour
         inputDir = new Vector3(h, 0f, v).normalized;
 
         // --- 점프 입력 ---
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            Jump();
-        }
+       // if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+       // {
+       //     Jump();
+       // }
     }
 
     void FixedUpdate()
@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.TransformDirection(inputDir) * moveSpeed;
 
         // 공중 제어 (isGrounded 아닐 때는 제어력 줄이기)
-        if (!isGrounded)
-            move *= airControl;
+      //  if (!isGrounded)
+       //     move *= airControl;
 
         Vector3 velocity = rb.velocity;
         velocity.x = move.x;
@@ -57,9 +57,9 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         // 위쪽으로 점프 힘 추가
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z); // 기존 y속도 초기화
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        isGrounded = false;
+       // rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z); // 기존 y속도 초기화
+      // rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+       // isGrounded = false;
     }
 
     // --- 바닥 접촉 감지 ---
