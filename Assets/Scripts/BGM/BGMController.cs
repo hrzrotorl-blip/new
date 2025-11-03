@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BGMController : MonoBehaviour
 {
-    private static BGMController instance;
+    public static BGMController instance;
     private AudioSource audioSource;
 
     void Awake()
