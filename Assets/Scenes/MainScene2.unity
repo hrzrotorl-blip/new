@@ -1549,7 +1549,7 @@ MonoBehaviour:
   resultPanel: {fileID: 1555551636}
   mainGameUI: {fileID: 167363565}
   finalTimeText: {fileID: 464484225}
-  nextSceneName: EndScene
+  nextSceneName: IntroAnimationScene 3
   sceneLoadDelay: 2
   fadePanel: {fileID: 222428709}
   fadeDuration: 2
