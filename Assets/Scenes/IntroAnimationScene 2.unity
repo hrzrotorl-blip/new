@@ -567,6 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815431419}
   - component: {fileID: 1815431418}
+  - component: {fileID: 1815431420}
   m_Layer: 0
   m_Name: IntroManager
   m_TagString: Untagged
@@ -581,13 +582,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815431417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94d437eb6f5551741a31a4e2c96ac7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationDuration: 15
-  nextSceneName: MainScene2
 --- !u!4 &1815431419
 Transform:
   m_ObjectHideFlags: 0
@@ -603,6 +603,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815431420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815431417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e757a5a9b4533e84f892dfd37a07a3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDuration: 15
+  nextSceneName: MainScene2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
