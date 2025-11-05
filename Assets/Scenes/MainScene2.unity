@@ -4519,7 +4519,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2339974347863502483, guid: f7e4059e9d307f642b225380b63ebcc6, type: 3}
+  - {fileID: 2100000, guid: dc27a64a54d548a45814f9de55bda706, type: 2}
   - {fileID: -8274133419916619345, guid: f7e4059e9d307f642b225380b63ebcc6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5001,7 +5001,7 @@ GameObject:
   - component: {fileID: 8482381506092364938}
   - component: {fileID: 8418640413818010335}
   m_Layer: 0
-  m_Name: Cube.003
+  m_Name: Tofu.03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5189,7 +5189,7 @@ GameObject:
   - component: {fileID: 5876691190032367676}
   - component: {fileID: 8387194726819446466}
   m_Layer: 0
-  m_Name: Kimchi.006
+  m_Name: Toiju
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5280,7 +5280,7 @@ GameObject:
   - component: {fileID: 5366159434995493860}
   - component: {fileID: 7202271455568962942}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Alcohol.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5466,7 +5466,7 @@ GameObject:
   - component: {fileID: 5995808537415440657}
   - component: {fileID: 1184155344269898238}
   m_Layer: 0
-  m_Name: "B\xE9zierCurve.002"
+  m_Name: Gosari
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5977,7 +5977,7 @@ GameObject:
   - component: {fileID: 911117217257561836}
   - component: {fileID: 8084475364008613036}
   m_Layer: 0
-  m_Name: "B\xE9zierCurve.020"
+  m_Name: Spinach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6137,7 +6137,7 @@ GameObject:
   - component: {fileID: 6136698514262652587}
   - component: {fileID: 490939696397319226}
   m_Layer: 0
-  m_Name: "B\xE9zierCurve.001"
+  m_Name: Doraji
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6588,7 +6588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 99656467281103303, guid: f7e4059e9d307f642b225380b63ebcc6, type: 3}
+  - {fileID: 2100000, guid: dc27a64a54d548a45814f9de55bda706, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6630,7 +6630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 99656467281103303, guid: f7e4059e9d307f642b225380b63ebcc6, type: 3}
+  - {fileID: 2100000, guid: dc27a64a54d548a45814f9de55bda706, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7492,7 +7492,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5605289326131794027, guid: f7e4059e9d307f642b225380b63ebcc6, type: 3}
+  - {fileID: 2100000, guid: dc27a64a54d548a45814f9de55bda706, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7526,7 +7526,7 @@ GameObject:
   - component: {fileID: 3010172808297610353}
   - component: {fileID: 8544783547150169196}
   m_Layer: 0
-  m_Name: Cube.002
+  m_Name: Tofu.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7594,7 +7594,7 @@ GameObject:
   - component: {fileID: 4109396431430960048}
   - component: {fileID: 7071182762413980443}
   m_Layer: 0
-  m_Name: Cylinder.001
+  m_Name: Alcohol.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7696,7 +7696,7 @@ GameObject:
   - component: {fileID: 3260616447780694049}
   - component: {fileID: 7762067043476582832}
   m_Layer: 0
-  m_Name: Cube.001
+  m_Name: Tofu.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
