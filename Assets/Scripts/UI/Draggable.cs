@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))] //
+[RequireComponent(typeof(Rigidbody))] //
 public class Draggable : MonoBehaviour
 {
     public int id = 0;                      // Object identity (0~10)
@@ -11,181 +11,202 @@ public class Draggable : MonoBehaviour
     public float returnSpeed = 8f;          // Return speed to original position
     public float snapSpeed = 12f;           // Snap (magnet) speed
 
-    [HideInInspector] public bool isPlaced = false;
+    [HideInInspector] public bool isPlaced = false; //
 
-    Vector3 originalPosition;
-    Quaternion originalRotation;
-    Transform originalParent;
-    Rigidbody rb;
-    Collider col;
+    Vector3 originalPosition; //
+    Quaternion originalRotation; //
+    Transform originalParent; //
+    Rigidbody rb; //
+    Collider col; //
 
-    bool dragging = false;
-    Vector3 dragOffset;
-    float fixedY;
-    CursorManager2 cursorManager;
+    bool dragging = false; //
+    Vector3 dragOffset; //
+    float fixedY; //
+    CursorManager2 cursorManager; //
+
+    // [수정 사항 2] private PuzzleManager puzzleManager; 필드 삭제
+    // private PuzzleManager puzzleManager;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        col = GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>(); //
+        col = GetComponent<Collider>(); //
 
         // find cursor manager
-        cursorManager = FindObjectOfType<CursorManager2>();
+        cursorManager = FindObjectOfType<CursorManager2>(); //
 
         // save original position
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
-        originalParent = transform.parent;
+        originalPosition = transform.position; //
+        originalRotation = transform.rotation; //
+        originalParent = transform.parent; //
 
         // disable physics during drag
-        rb.isKinematic = true;
+        rb.isKinematic = true; //
 
         // fix height
-        fixedY = transform.position.y;
+        fixedY = transform.position.y; //
+
+        // [수정 사항 1] puzzleManager = FindObjectOfType<PuzzleManager>(); 관련 코드 두 줄 삭제
+        /*
+        puzzleManager = FindObjectOfType<PuzzleManager>();
+        if (puzzleManager == null)
+        {
+            Debug.LogWarning($"Draggable ({gameObject.name}): 씬에서 PuzzleManager를 찾을 수 없습니다.");
+        }
+        */
     }
 
-    void OnMouseEnter()
+    void OnMouseEnter() //
     {
-        if (!isPlaced && cursorManager != null)
-            cursorManager.SetHandOpen();
+        if (!isPlaced && cursorManager != null) //
+            cursorManager.SetHandOpen(); //
     }
 
-    void OnMouseExit()
+    void OnMouseExit() //
     {
-        if (!isPlaced && cursorManager != null)
-            cursorManager.SetDefaultCursor();
+        if (!isPlaced && cursorManager != null) //
+            cursorManager.SetDefaultCursor(); //
     }
 
-    void OnMouseDown()
+    void OnMouseDown() //
     {
-        if (isPlaced) return;
+        if (isPlaced) return; //
 
-        dragging = true;
+        dragging = true; //
 
         // change cursor to closed hand
-        if (cursorManager != null)
-            cursorManager.SetHandClosed();
+        if (cursorManager != null) //
+            cursorManager.SetHandClosed(); //
 
         // calculate offset between object and mouse position
-        Plane plane = new Plane(Vector3.up, new Vector3(0, fixedY, 0));
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (plane.Raycast(ray, out float enter))
+        Plane plane = new Plane(Vector3.up, new Vector3(0, fixedY, 0)); //
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //
+        if (plane.Raycast(ray, out float enter)) //
         {
-            Vector3 hit = ray.GetPoint(enter);
-            dragOffset = transform.position - hit;
+            Vector3 hit = ray.GetPoint(enter); //
+            dragOffset = transform.position - hit; //
         }
 
         // temporarily disable collider during drag
-        col.enabled = false;
+        col.enabled = false; //
     }
 
-    void OnMouseDrag()
+    void OnMouseDrag() //
     {
-        if (!dragging || isPlaced) return;
+        if (!dragging || isPlaced) return; //
 
-        if (cursorManager != null)
-            cursorManager.SetHandClosed();
+        if (cursorManager != null) //
+            cursorManager.SetHandClosed(); //
 
-        Plane plane = new Plane(Vector3.up, new Vector3(0, fixedY, 0));
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (plane.Raycast(ray, out float enter))
+        Plane plane = new Plane(Vector3.up, new Vector3(0, fixedY, 0)); //
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //
+        if (plane.Raycast(ray, out float enter)) //
         {
-            Vector3 hit = ray.GetPoint(enter);
-            Vector3 target = hit + dragOffset;
-            target.y = fixedY;
-            transform.position = target;
+            Vector3 hit = ray.GetPoint(enter); //
+            Vector3 target = hit + dragOffset; //
+            target.y = fixedY; //
+            transform.position = target; //
         }
     }
 
-    void OnMouseUp()
+    void OnMouseUp() //
     {
         // reset cursor to default when releasing
-        if (cursorManager != null)
-            cursorManager.SetDefaultCursor();
+        if (cursorManager != null) //
+            cursorManager.SetDefaultCursor(); //
 
-        if (!dragging || isPlaced) return;
-        dragging = false;
-        col.enabled = true;
+        if (!dragging || isPlaced) return; //
+        dragging = false; //
+        col.enabled = true; //
 
         // find nearest DropSlot
-        DropSlot[] slots = FindObjectsOfType<DropSlot>();
-        DropSlot best = null;
-        float bestDist = float.MaxValue;
-        foreach (var s in slots)
+        DropSlot[] slots = FindObjectsOfType<DropSlot>(); //
+        DropSlot best = null; //
+        float bestDist = float.MaxValue; //
+        foreach (var s in slots) //
         {
-            if (s.isOccupied) continue;
-            float d = Vector3.Distance(transform.position, s.GetSnapPosition());
-            if (d < bestDist)
+            if (s.isOccupied) continue; //
+            float d = Vector3.Distance(transform.position, s.GetSnapPosition()); //
+            if (d < bestDist) //
             {
-                bestDist = d;
-                best = s;
+                bestDist = d; //
+                best = s; //
             }
         }
 
-        if (best != null && bestDist <= snapDistance && best.id == this.id)
+        if (best != null && bestDist <= snapDistance && best.id == this.id) //
         {
             // snap to slot
-            StartCoroutine(SnapToSlotRoutine(best));
+            StartCoroutine(SnapToSlotRoutine(best)); //
         }
         else
         {
             // return to original
-            StartCoroutine(ReturnToOriginalRoutine());
+            StartCoroutine(ReturnToOriginalRoutine()); //
         }
     }
 
-    IEnumerator SnapToSlotRoutine(DropSlot slot)
+    IEnumerator SnapToSlotRoutine(DropSlot slot) //
     {
-        Vector3 targetPos = slot.GetSnapPosition();
-        Quaternion targetRot = slot.GetSnapRotation();
-        float t = 0f;
-        Vector3 startPos = transform.position;
-        Quaternion startRot = transform.rotation;
+        Vector3 targetPos = slot.GetSnapPosition(); //
+        Quaternion targetRot = slot.GetSnapRotation(); //
+        float t = 0f; //
+        Vector3 startPos = transform.position; //
+        Quaternion startRot = transform.rotation; //
 
-        slot.Occupy(this);
+        slot.Occupy(this); //
 
-        while (t < 1f)
+        while (t < 1f) //
         {
-            t += Time.deltaTime * snapSpeed * 0.5f;
-            transform.position = Vector3.Lerp(startPos, targetPos, t);
-            transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
-            yield return null;
+            t += Time.deltaTime * snapSpeed * 0.5f; //
+            transform.position = Vector3.Lerp(startPos, targetPos, t); //
+            transform.rotation = Quaternion.Slerp(startRot, targetRot, t); //
+            yield return null; //
         }
 
-        transform.position = targetPos;
-        transform.rotation = targetRot;
+        transform.position = targetPos; //
+        transform.rotation = targetRot; //
 
-        transform.SetParent(slot.transform, true);
-        isPlaced = true;
-        col.enabled = false;
-        rb.isKinematic = true;
-    }
+        transform.SetParent(slot.transform, true); //
+        isPlaced = true; //
 
-    IEnumerator ReturnToOriginalRoutine()
-    {
-        float t = 0f;
-        Vector3 startPos = transform.position;
-        Quaternion startRot = transform.rotation;
-
-        while (t < 1f)
+        // [수정 사항 3] puzzleManager.CheckCompletionState(); 관련 코드 변경
+        // [수정] Draggable이 직접 매니저를 호출하는 대신,
+        // 자신이 들어간 슬롯(slot)에게 매니저 호출을 위임한다.
+        if (slot.myManager != null)
         {
-            t += Time.deltaTime * returnSpeed * 0.5f;
-            transform.position = Vector3.Lerp(startPos, originalPosition, t);
-            transform.rotation = Quaternion.Slerp(startRot, originalRotation, t);
-            yield return null;
+            slot.myManager.CheckCompletionState();
         }
 
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
+        col.enabled = false; //
+        rb.isKinematic = true; //
     }
 
-    public void ResetToOriginal()
+    IEnumerator ReturnToOriginalRoutine() //
     {
-        StopAllCoroutines();
-        transform.SetParent(originalParent, true);
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-        isPlaced = false;
-        col.enabled = true;
+        float t = 0f; //
+        Vector3 startPos = transform.position; //
+        Quaternion startRot = transform.rotation; //
+
+        while (t < 1f) //
+        {
+            t += Time.deltaTime * returnSpeed * 0.5f; //
+            transform.position = Vector3.Lerp(startPos, originalPosition, t); //
+            transform.rotation = Quaternion.Slerp(startRot, originalRotation, t); //
+            yield return null; //
+        }
+
+        transform.position = originalPosition; //
+        transform.rotation = originalRotation; //
+    }
+
+    public void ResetToOriginal() //
+    {
+        StopAllCoroutines(); //
+        transform.SetParent(originalParent, true); //
+        transform.position = originalPosition; //
+        transform.rotation = originalRotation; //
+        isPlaced = false; //
+        col.enabled = true; //
     }
 }
