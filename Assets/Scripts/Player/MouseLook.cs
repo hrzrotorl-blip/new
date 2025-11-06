@@ -7,7 +7,7 @@ public class MouseLook : MonoBehaviour
 
     // 이 변수는 인스펙터에 노출되어 기본 감도를 설정합니다.
     [Header("Base Sensitivity")]
-    public float baseMouseSensitivity = 50f;
+    public float baseMouseSensitivity = 100f;
 
     // (기존 코드 유지)
     public Transform playerBody;
