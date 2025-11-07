@@ -7327,7 +7327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bb885b6c0ee4b44b6741341b216da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visitsToDisappear: 3
+  visitsToDisappear: 10
   sceneVisitKey: B_D
 --- !u!65 &1838679659
 BoxCollider:
