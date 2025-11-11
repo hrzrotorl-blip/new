@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 20
   timerText: {fileID: 336846544}
-  nextSceneName: MainScene
+  nextSceneName: quiz Scene1
   warningColor: {r: 1, g: 0, b: 0, a: 1}
   warningTime: 10
 --- !u!1 &718680068
