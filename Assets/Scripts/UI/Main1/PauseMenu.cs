@@ -71,25 +71,44 @@ public class PauseMenu : MonoBehaviour
     }
 
     // [수정] Update() 메서드
-    void Update()
+    // --- [!!! 여기가 수정된 Update() 메서드입니다 !!!] ---
+    /// <summary>
+    /// ESC 키 입력을 감지하여 일시정지를 토글합니다.
+    /// 만약 하위 패널(옵션 등)이 열린 상태라면 ESC 키 입력을 무시합니다.
+    /// </summary>
+    void Update() //
     {
-        Scene currentScene = SceneManager.GetActiveScene();
+        Scene currentScene = SceneManager.GetActiveScene(); //
 
-        // [수정] titleSceneName 또는 additionalDisabledScenes 목록에 포함된 씬인지 확인
-        if (currentScene.name == titleSceneName || additionalDisabledScenes.Contains(currentScene.name))
+        // [기존] 비활성화 씬 검사
+        if (currentScene.name == titleSceneName || additionalDisabledScenes.Contains(currentScene.name)) //
         {
             return; // 비활성화 씬이면 ESC 입력 무시
         }
 
+        // [수정된 ESC 키 로직]
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (isPaused) // 1. 이미 일시정지 상태일 때
             {
-                Resume();
+                // 2. [!!!] 만약 '메인 버튼 패널'이 "비활성화" 상태라면 
+                //    (즉, '옵션'이나 '조작법' 같은 하위 패널이 켜져 있다면)
+                if (mainButtonsPanel != null && !mainButtonsPanel.activeInHierarchy)
+                {
+                    // 아무것도 하지 않고 Update 함수를 종료합니다.
+                    // (ESC 키 무시)
+                    return;
+                }
+                else
+                {
+                    // 3. '메인 패널'이 켜져 있었다면, 일시정지를 해제합니다.
+                    Resume(); //
+                }
             }
-            else
+            else // 4. 일시정지가 아니었다면
             {
-                Pause();
+                // 일시정지를 시작합니다.
+                Pause(); //
             }
         }
     }
