@@ -1532,7 +1532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &717501495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   resultSound: {fileID: 8300000, guid: 61a2c2d813a888c49894e7f38b7f86f0, type: 3}
   finalTimeText: {fileID: 464484225}
   nextSceneName: IntroAnimationScene 3
-  sceneLoadDelay: 10
+  sceneLoadDelay: 8
   fadePanel: {fileID: 222428709}
   fadeDuration: 4
 --- !u!4 &978565419
@@ -3721,7 +3721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1393445639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3865,7 +3865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1555551637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8399,7 +8399,7 @@ MonoBehaviour:
   returnSpeed: 8
   snapSpeed: 12
   feedbackObject: {fileID: 1310430428}
-  wrongSound: {fileID: 8300000, guid: de62a0bbac3404d4da5398af2a336ac3, type: 3}
+  wrongSound: {fileID: 0}
   feedbackAngle: 45
   feedbackStepDuration: 0.12
   isPlaced: 0
