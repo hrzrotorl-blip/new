@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 238040802}
   - component: {fileID: 238040801}
   - component: {fileID: 238040800}
+  - component: {fileID: 238040804}
   m_Layer: 0
   m_Name: TV_Screen
   m_TagString: Untagged
@@ -1707,6 +1708,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238040798}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &238040804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238040798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad07b351b3420044a31a81178ea5e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1001 &282167534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7718,6 +7732,7 @@ GameObject:
   - component: {fileID: 1477068464}
   - component: {fileID: 1477068466}
   - component: {fileID: 1477068465}
+  - component: {fileID: 1477068467}
   m_Layer: 0
   m_Name: Door_Trigger
   m_TagString: Untagged
@@ -7975,6 +7990,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1477068467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477068461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &1481446591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10505,6 +10533,9 @@ GameObject:
   - component: {fileID: 1937382647}
   - component: {fileID: 1937382651}
   - component: {fileID: 1937382652}
+  - component: {fileID: 1937382655}
+  - component: {fileID: 1937382654}
+  - component: {fileID: 1937382653}
   m_Layer: 0
   m_Name: uncletrigger
   m_TagString: Untagged
@@ -10606,6 +10637,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: ef2bb2c7718b7ab47a11809c291c8a7b, type: 3}
+--- !u!114 &1937382653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937382646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad07b351b3420044a31a81178ea5e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
+--- !u!328 &1937382654
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937382646}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1937382655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937382646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1001 &1986961444
 PrefabInstance:
   m_ObjectHideFlags: 0

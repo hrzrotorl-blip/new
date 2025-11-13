@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 265220178}
   - component: {fileID: 265220179}
   - component: {fileID: 265220180}
+  - component: {fileID: 265220181}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -783,6 +784,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &265220181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265220177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &299932445
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +808,7 @@ GameObject:
   - component: {fileID: 299932446}
   - component: {fileID: 299932448}
   - component: {fileID: 299932447}
+  - component: {fileID: 299932449}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -853,6 +868,19 @@ MonoBehaviour:
   triggerClip: {fileID: 8300000, guid: de62a0bbac3404d4da5398af2a336ac3, type: 3}
   audioSource: {fileID: 0}
   extraWait: 0
+--- !u!114 &299932449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299932445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &303134796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1076,7 @@ GameObject:
   - component: {fileID: 422699114}
   - component: {fileID: 422699116}
   - component: {fileID: 422699115}
+  - component: {fileID: 422699117}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1107,6 +1136,19 @@ MonoBehaviour:
   triggerClip: {fileID: 8300000, guid: de62a0bbac3404d4da5398af2a336ac3, type: 3}
   audioSource: {fileID: 0}
   extraWait: 0
+--- !u!114 &422699117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422699113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &505025683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1618,7 @@ GameObject:
   - component: {fileID: 718838498}
   - component: {fileID: 718838499}
   - component: {fileID: 718838500}
+  - component: {fileID: 718838501}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1635,6 +1678,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &718838501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718838497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &768917670
 GameObject:
   m_ObjectHideFlags: 0

@@ -2269,6 +2269,7 @@ GameObject:
   - component: {fileID: 978565418}
   - component: {fileID: 978565420}
   - component: {fileID: 978565421}
+  - component: {fileID: 978565422}
   m_Layer: 0
   m_Name: GameManager0
   m_TagString: Untagged
@@ -2431,6 +2432,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &978565422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978565417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &979678180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1037908742
 AudioSource:
   m_ObjectHideFlags: 0
