@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 40159617}
   - component: {fileID: 40159616}
   - component: {fileID: 40159615}
+  - component: {fileID: 40159618}
   m_Layer: 0
   m_Name: SceneEntrySound
   m_TagString: Untagged
@@ -266,6 +267,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40159618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40159614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf6a188ad3112741b5dab2368f825ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMixerGroup: {fileID: 24300002, guid: 8cf0de25c82ddbf4ebb5668e0859252c, type: 2}
 --- !u!1 &135390911
 GameObject:
   m_ObjectHideFlags: 0
